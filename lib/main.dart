@@ -59,11 +59,38 @@ class MyApp extends StatelessWidget {
                               SizedBox(
                                 width: 20,
                               ),
-                              IconButton(
-                                onPressed: () {},
-                                icon: Icon(
-                                  CupertinoIcons.cart,
-                                  color: Colors.white,
+                              GestureDetector(
+                                onTap: () {},
+                                child: Stack(
+                                  clipBehavior: Clip.none,
+                                  children: [
+                                    Icon(
+                                      CupertinoIcons.cart,
+                                      color: Colors.white,
+                                      size: 30,
+                                    ),
+                                    Positioned(
+                                      top: -15,
+                                      right: -5,
+                                      child: Container(
+                                        height: 18,
+                                        width: 18,
+                                        child: Center(
+                                          child: Text(
+                                            '2',
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                        decoration: BoxDecoration(
+                                          color: Colors.deepOrange,
+                                          borderRadius:
+                                              BorderRadius.circular(15),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
                               SizedBox(
@@ -96,24 +123,28 @@ class MyApp extends StatelessWidget {
                             'FLAVORS',
                             style: TextStyle(
                               fontSize: 18,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                           Text(
                             'STORE',
                             style: TextStyle(
                               fontSize: 18,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                           Text(
                             'BLOG',
                             style: TextStyle(
                               fontSize: 18,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                           Text(
                             'ABOUT US',
                             style: TextStyle(
                               fontSize: 18,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                           SizedBox(
@@ -184,11 +215,20 @@ class MyApp extends StatelessWidget {
                               Stack(
                                 alignment: Alignment.center,
                                 children: [
-                                  SvgPicture.asset(
-                                    'lib/Rectangle3.svg',
-                                    color: Colors.black,
-                                    height: 65,
-                                    width: 150,
+                                  Container(
+                                    decoration: BoxDecoration(boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black.withOpacity(0.6),
+                                        offset: Offset(0, 30),
+                                        blurRadius: 60,
+                                      ),
+                                    ]),
+                                    child: SvgPicture.asset(
+                                      'lib/Rectangle3.svg',
+                                      color: Colors.black,
+                                      height: 65,
+                                      width: 150,
+                                    ),
                                   ),
                                   Text(
                                     'Add To Cart',
@@ -211,7 +251,7 @@ class MyApp extends StatelessWidget {
                                     '\$4.97',
                                     style: TextStyle(
                                       fontSize: 30,
-                                      fontWeight: FontWeight.w700,
+                                      fontWeight: FontWeight.w900,
                                     ),
                                   ),
                                   Text(
@@ -237,10 +277,19 @@ class MyApp extends StatelessWidget {
                         children: [
                           Stack(
                             children: [
-                              SvgPicture.asset(
-                                'lib/Rectangle4.svg',
-                                height: 200,
-                                color: AppColors.bannerColor,
+                              Container(
+                                decoration: BoxDecoration(boxShadow: [
+                                  BoxShadow(
+                                    color: AppColors.bannerTextColor,
+                                    offset: Offset(0, 90),
+                                    blurRadius: 100,
+                                  ),
+                                ]),
+                                child: SvgPicture.asset(
+                                  'lib/Rectangle4.svg',
+                                  height: 200,
+                                  color: AppColors.bannerColor,
+                                ),
                               ),
                               Positioned(
                                 right: 18,
@@ -289,10 +338,19 @@ class MyApp extends StatelessWidget {
                           ),
                           Stack(
                             children: [
-                              SvgPicture.asset(
-                                'lib/Rectangle4.svg',
-                                height: 200,
-                                color: AppColors.bannerColor,
+                              Container(
+                                decoration: BoxDecoration(boxShadow: [
+                                  BoxShadow(
+                                    color: AppColors.bannerTextColor,
+                                    offset: Offset(0, 90),
+                                    blurRadius: 100,
+                                  )
+                                ]),
+                                child: SvgPicture.asset(
+                                  'lib/Rectangle4.svg',
+                                  height: 200,
+                                  color: AppColors.bannerColor,
+                                ),
                               ),
                               Positioned(
                                 right: 18,
